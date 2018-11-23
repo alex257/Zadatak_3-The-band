@@ -1,0 +1,139 @@
+.music {
+  background-color: $bg--music;
+  &__image {
+    margin-top: 101px;
+    margin-left: 85px;
+    display: block;
+  }
+
+  &__now-playing {
+    margin-left: 15px;
+  }
+
+  &__h4 {
+    margin-top: 108px;
+    &--second {
+      margin-top: 21px;
+    }
+  }
+
+  &__song-name {
+    margin-top: -37px;
+    &--second {
+      margin-top: 42px;
+    }
+  }
+
+  &__song-number--active {
+    margin-top: -35px;
+  }
+
+  &__player {
+    margin-top: 43px;
+  }
+
+  &__progress-bar {
+    width: 635px;
+    height: 8px;
+    border-radius: 5px;
+    margin-top: -80px;
+    background: linear-gradient(to right, $white 42.6%, $accent 42.6%);
+  }
+
+  &__circle {
+    color: $accent;
+    font-size: 33px;
+    margin-left: 270px;
+    margin-bottom: 60px;
+  }
+
+  &__icons {
+    color: $white;
+    margin-left: -149px;
+    margin-top: -6px;
+    margin-bottom: 20px;
+  }
+
+  &__icon--backward {
+    span {
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-right: 31px solid $white;
+      border-left: 31px solid transparent;
+      margin-right: -36px;
+      display: inline-block;
+    }
+  }
+  &__icon--pause {
+    margin-left: 132px;
+    margin-right: 79px;
+    span {
+      background-color: $white;
+      width: 10px;
+      height: 46px;
+      margin-right: 7px;
+      display: inline-block;
+    }
+  }
+
+  &__icon--forward {
+    margin-right: 95px;
+    span {
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 31px solid $white;
+      border-right: 31px solid transparent;
+      margin-right: -36px;
+      display: inline-block;
+    }
+  }
+
+  &__dot {
+    width: 16px;
+    height: 16px;
+    background-color: $white;
+    border-radius: 50%;
+    margin-left: 15px;
+  }
+
+  &__album {
+    margin-top: -59px;
+    &:first-of-type {
+      margin-top: -66px;
+    }
+  }
+  &__year {
+    margin-right: 154px;
+    margin-left: 42px;
+  }
+
+  .button--light {
+    margin-right: 30px;
+    margin-left: -90px;
+  }
+
+  &__song-wrapper {
+    margin-left: 30px;
+  }
+
+  &__song {
+    margin-top: -71px;
+    &:first-of-type {
+      margin-top: -58px;
+    }
+    &:last-of-type {
+      margin-bottom: 129px;
+    }
+  }
+  .triangle {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 14px solid $white;
+    border-right: 14px solid transparent;
+    display: inline-block;
+    margin-right: 6px;
+    &--active {
+      border-left-color: $accent;
+    }
+  }
+}

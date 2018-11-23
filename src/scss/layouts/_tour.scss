@@ -1,0 +1,97 @@
+.tour {
+  background-color: $bg--tour;
+  &__line {
+    background-color: $white;
+    width: 857px;
+    height: 3px;
+  }
+  &__heading {
+    margin-top: 57px;
+    margin-bottom: 56px;
+  }
+  &__arrow--left,
+  &__arrow--right {
+    position: relative;
+    top: 133px;
+    width: 31px;
+    height: 31px;
+    transition: 0.5s;
+    //border-radius: 3px;
+  }
+
+  &__arrow--left {
+    border-top: 3px solid $white;
+    border-right: 3px solid $white;
+    transform: rotate(225deg);
+    margin-right: 260px;
+  }
+
+  &__arrow--right {
+    border-top: 3px solid $white;
+    border-left: 3px solid $white;
+    transform: rotate(135deg);
+    margin-left: 260px;
+  }
+
+  &__dot {
+    width: 13px;
+    height: 13px;
+    background-color: $accent;
+    border-radius: 50%;
+    margin-left: 16px;
+    &--past {
+      background-color: $white;
+    }
+    &--active {
+      background-color: $black;
+    }
+  }
+
+  &__timetable {
+    transform: rotate(270deg);
+    margin-top: -248px;
+  }
+
+  &__date-column {
+    //margin-right: -20px;
+    margin-bottom: -21px;
+    &--active {
+      margin-bottom: -3px;
+      margin-top: 18px;
+    }
+  }
+
+  &__tickets {
+    overflow-y: scroll;
+    scroll-behavior: auto;
+    margin-bottom: 71px;
+    margin-top: -210px;
+  }
+  &__day {
+    padding-right: 5px;
+  }
+
+  &__separator {
+    background-color: $white;
+    height: 46px;
+    width: 6px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  &__button {
+    margin-right: 110px;
+    margin-left: 430px;
+  }
+  &__dots--mini {
+    margin-top: -29px;
+    margin-bottom: -23px;
+    span {
+      display: inline-block;
+      width: 2px;
+      height: 2px;
+      background-color: $accent;
+      border-radius: 50%;
+      margin-right: 14px;
+    }
+  }
+}

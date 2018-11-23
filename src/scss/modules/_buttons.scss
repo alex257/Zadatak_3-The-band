@@ -1,0 +1,23 @@
+.button {
+  width: 80px;
+  height: 36px;
+  text-transform: uppercase;
+  font-family: "Oswald Regular";
+  font-size: 18px;
+
+  &--dark {
+    color: $white;
+    background-color: $accent;
+    padding: 7px 24px;
+  }
+
+  &--light {
+    color: $accent;
+    background-color: $white;
+    padding: 7px 16px;
+  }
+
+  &--tickets {
+    padding: 5px 15px;
+  }
+}

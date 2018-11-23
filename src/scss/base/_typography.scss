@@ -5,8 +5,8 @@ h2 {
 }
 
 h1 {
-  font-size: 100px;
-  line-height: 139px;
+  font-size: 98px;
+  line-height: 109px;
 }
 
 h2 {
@@ -20,8 +20,96 @@ h4 {
   line-height: 75px;
 }
 
+h5.music__song-name,
+h5.music__album-name,
+.music__album,
+.tour__h5 {
+  font-family: "Oswald Light";
+  font-weight: 300;
+  font-size: 30px;
+  //line-height: 69px;
+}
+
+//h5.music__song-name,
+//h5.music__album-name,
+.music__year {
+  //.tours__h5 {
+  font-family: "Oswald Light";
+}
+
+h6 {
+  font-family: "Lora Italic";
+  color: $accent;
+  font-size: 18px;
+  //line-height: 2;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
 p {
   font-family: "Lora Regular";
   font-size: 18px;
   line-height: 36px;
+}
+
+.nav {
+  font-family: "Lora Bold";
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 300;
+  //line-height: 36px;
+}
+
+.words {
+  font-family: "Lora Regular";
+  font-size: 14px;
+  //line-height: 36px;
+  //letter-spacing: -0.2px;
+  color: $accent;
+  text-transform: uppercase;
+  margin-bottom: -19px;
+}
+
+.about__member-name {
+  font-family: "Lora Italic";
+  font-size: 12px;
+  font-weight: 200;
+  //line-height: 78px;
+  color: $accent;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+}
+
+.tour {
+  &__day {
+    font-family: "Oswald Bold";
+    font-size: 50px;
+  }
+
+  &__month,
+  &__year{
+    font-family: "Oswald Bold";
+    font-size: 23px;
+    text-transform: uppercase;
+  }
+
+  &__dates {
+    font-family: "Lora Bold";
+    font-size: 15px;
+    font-weight: 300;
+    color: $accent;
+    text-transform: uppercase;
+
+    &--past {
+      color: $white;
+    }
+
+    &--city {
+      margin-top: -27px;
+    }
+
+    &--active {
+      color: $black;
+    }
+  }
 }

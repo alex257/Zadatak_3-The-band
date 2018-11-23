@@ -1,0 +1,75 @@
+.about {
+  background: $bg--about;
+  height: 962px;
+
+  &__arrow--left,
+  &__arrow--right {
+    position: relative;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    transition: 0.5s;
+    border-radius: 3px;
+  }
+
+  &__arrow--left {
+    border-top: 6px solid $accent;
+    border-right: 6px solid $accent;
+    transform: rotate(225deg);
+  }
+
+  &__arrow--right {
+    border-top: 6px solid $accent;
+    border-left: 6px solid $accent;
+    transform: rotate(135deg);
+  }
+
+  &__name {
+    margin-top: -344px;
+    margin-left: 180px;
+    span {
+      //margin-left: 80px;
+    }
+  }
+
+  &__image {
+    margin-top: 203px;
+    margin-left: -150px;
+    //width: 100%;
+    //height: 100%;
+    //background-size: 100%;
+    width: 572px;
+    height: 760px;
+    //display: block;
+    //max-width: 100%;
+    //height: auto;
+  }
+
+  &__member-list {
+    margin: 231px 0px 70px 0;
+    transform: rotate(270deg);
+  }
+
+  &__member-name {
+  }
+
+  &__dot {
+    width: 11px;
+    height: 11px;
+    line-height: 11px;
+    border-radius: 50%;
+    background-color: $accent;
+    margin: 0 9px;
+  }
+
+  &__role {
+  }
+
+  &__h4 {
+    margin-top: 90px;
+    margin-bottom: 18px;
+  }
+  &__text {
+    margin-left: 68px;
+  }
+}

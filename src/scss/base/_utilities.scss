@@ -55,9 +55,12 @@
   align-items: center;
 }
 
+.flex-1 {
+  flex-grow: 1;
+}
 //Background
 
-.bg-dark {
+.bg--dark {
   background-color: $black;
 }
 
@@ -65,10 +68,18 @@
   color: $black;
 }
 
-.bg-light {
+.bg--light {
   background-color: $white;
 }
 
 .light {
   color: $white;
+}
+
+.accent {
+  color: $accent;
+}
+
+.bg--accent {
+  background-color: $accent;
 }

@@ -451,7 +451,7 @@ template {
 [hidden] {
   display: none; }
 
-@media (min-width: 400px) {
+@media (max-width: 400px) {
   .col-xs-1 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 5%;
@@ -613,7 +613,7 @@ template {
   .col-xs-offset-right-20 {
     margin-right: 100%; } }
 
-@media (min-width: 680px) {
+@media (max-width: 680px) {
   .col-sm-1 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 5%;
@@ -775,7 +775,7 @@ template {
   .col-sm-offset-right-20 {
     margin-right: 100%; } }
 
-@media (min-width: 980px) {
+@media (max-width: 980px) {
   .col-md-1 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 5%;
@@ -937,7 +937,7 @@ template {
   .col-md-offset-right-20 {
     margin-right: 100%; } }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .col-lg-1 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 5%;
@@ -1099,6 +1099,168 @@ template {
   .col-lg-offset-right-20 {
     margin-right: 100%; } }
 
+@media (max-width: 1950px) {
+  .col-xl-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 5%;
+    flex: 0 0 5%; }
+  .col-xl-offset-left-1 {
+    margin-left: 5%; }
+  .col-xl-offset-right-1 {
+    margin-right: 5%; }
+  .col-xl-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%; }
+  .col-xl-offset-left-2 {
+    margin-left: 10%; }
+  .col-xl-offset-right-2 {
+    margin-right: 10%; }
+  .col-xl-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 15%;
+    flex: 0 0 15%; }
+  .col-xl-offset-left-3 {
+    margin-left: 15%; }
+  .col-xl-offset-right-3 {
+    margin-right: 15%; }
+  .col-xl-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%; }
+  .col-xl-offset-left-4 {
+    margin-left: 20%; }
+  .col-xl-offset-right-4 {
+    margin-right: 20%; }
+  .col-xl-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%; }
+  .col-xl-offset-left-5 {
+    margin-left: 25%; }
+  .col-xl-offset-right-5 {
+    margin-right: 25%; }
+  .col-xl-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%; }
+  .col-xl-offset-left-6 {
+    margin-left: 30%; }
+  .col-xl-offset-right-6 {
+    margin-right: 30%; }
+  .col-xl-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 35%;
+    flex: 0 0 35%; }
+  .col-xl-offset-left-7 {
+    margin-left: 35%; }
+  .col-xl-offset-right-7 {
+    margin-right: 35%; }
+  .col-xl-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%; }
+  .col-xl-offset-left-8 {
+    margin-left: 40%; }
+  .col-xl-offset-right-8 {
+    margin-right: 40%; }
+  .col-xl-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 45%;
+    flex: 0 0 45%; }
+  .col-xl-offset-left-9 {
+    margin-left: 45%; }
+  .col-xl-offset-right-9 {
+    margin-right: 45%; }
+  .col-xl-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%; }
+  .col-xl-offset-left-10 {
+    margin-left: 50%; }
+  .col-xl-offset-right-10 {
+    margin-right: 50%; }
+  .col-xl-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 55%;
+    flex: 0 0 55%; }
+  .col-xl-offset-left-11 {
+    margin-left: 55%; }
+  .col-xl-offset-right-11 {
+    margin-right: 55%; }
+  .col-xl-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%; }
+  .col-xl-offset-left-12 {
+    margin-left: 60%; }
+  .col-xl-offset-right-12 {
+    margin-right: 60%; }
+  .col-xl-13 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 65%;
+    flex: 0 0 65%; }
+  .col-xl-offset-left-13 {
+    margin-left: 65%; }
+  .col-xl-offset-right-13 {
+    margin-right: 65%; }
+  .col-xl-14 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 70%;
+    flex: 0 0 70%; }
+  .col-xl-offset-left-14 {
+    margin-left: 70%; }
+  .col-xl-offset-right-14 {
+    margin-right: 70%; }
+  .col-xl-15 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%; }
+  .col-xl-offset-left-15 {
+    margin-left: 75%; }
+  .col-xl-offset-right-15 {
+    margin-right: 75%; }
+  .col-xl-16 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%; }
+  .col-xl-offset-left-16 {
+    margin-left: 80%; }
+  .col-xl-offset-right-16 {
+    margin-right: 80%; }
+  .col-xl-17 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 85%;
+    flex: 0 0 85%; }
+  .col-xl-offset-left-17 {
+    margin-left: 85%; }
+  .col-xl-offset-right-17 {
+    margin-right: 85%; }
+  .col-xl-18 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 90%;
+    flex: 0 0 90%; }
+  .col-xl-offset-left-18 {
+    margin-left: 90%; }
+  .col-xl-offset-right-18 {
+    margin-right: 90%; }
+  .col-xl-19 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 95%;
+    flex: 0 0 95%; }
+  .col-xl-offset-left-19 {
+    margin-left: 95%; }
+  .col-xl-offset-right-19 {
+    margin-right: 95%; }
+  .col-xl-20 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%; }
+  .col-xl-offset-left-20 {
+    margin-left: 100%; }
+  .col-xl-offset-right-20 {
+    margin-right: 100%; } }
+
 *,
 *:before,
 *:after {
@@ -1108,13 +1270,19 @@ template {
 body {
   background-color: #e4dddb;
   overflow-y: visible;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0; }
 
 .main-wrapper {
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0; }
 
 .container-full {
   width: 100%; }
+
+.container {
+  margin: 0  10.789%; }
 
 .row {
   display: -webkit-box;
@@ -1143,8 +1311,8 @@ h2 {
   text-transform: uppercase; }
 
 h1 {
-  font-size: 100px;
-  line-height: 139px; }
+  font-size: 98px;
+  line-height: 109px; }
 
 h2 {
   font-size: 80px;
@@ -1155,10 +1323,74 @@ h4 {
   font-size: 36px;
   line-height: 75px; }
 
+h5.music__song-name,
+h5.music__album-name,
+.music__album,
+.tour__h5 {
+  font-family: "Oswald Light";
+  font-weight: 300;
+  font-size: 30px; }
+
+.music__year {
+  font-family: "Oswald Light"; }
+
+h6 {
+  font-family: "Lora Italic";
+  color: #826b60;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: capitalize; }
+
 p {
   font-family: "Lora Regular";
   font-size: 18px;
   line-height: 36px; }
+
+.nav {
+  font-family: "Lora Bold";
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 300; }
+
+.words {
+  font-family: "Lora Regular";
+  font-size: 14px;
+  color: #826b60;
+  text-transform: uppercase;
+  margin-bottom: -19px; }
+
+.about__member-name {
+  font-family: "Lora Italic";
+  font-size: 12px;
+  font-weight: 200;
+  color: #826b60;
+  text-transform: uppercase;
+  letter-spacing: 0.9px; }
+
+.tour__day {
+  font-family: "Oswald Bold";
+  font-size: 50px; }
+
+.tour__month, .tour__year {
+  font-family: "Oswald Bold";
+  font-size: 23px;
+  text-transform: uppercase; }
+
+.tour__dates {
+  font-family: "Lora Bold";
+  font-size: 15px;
+  font-weight: 300;
+  color: #826b60;
+  text-transform: uppercase; }
+
+.tour__dates--past {
+  color: #e4dddb; }
+
+.tour__dates--city {
+  margin-top: -27px; }
+
+.tour__dates--active {
+  color: #241c18; }
 
 .d-flex {
   display: -webkit-box;
@@ -1232,14 +1464,373 @@ p {
   -ms-flex-align: center;
   align-items: center; }
 
-.bg-dark {
+.flex-1 {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+
+.bg--dark {
   background-color: #241c18; }
 
 .dark {
   color: #241c18; }
 
-.bg-light {
+.bg--light {
   background-color: #e4dddb; }
 
 .light {
   color: #e4dddb; }
+
+.accent {
+  color: #826b60; }
+
+.bg--accent {
+  background-color: #826b60; }
+
+.header {
+  background: url(../../img/guitar.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 950px; }
+
+.header__nav {
+  padding-top: 78px; }
+
+.header__nav ul li a {
+  color: #241c18; }
+
+.header__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #826b60;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: 4px 7px; }
+
+.header__words--first {
+  margin-top: 150px;
+  padding-left: 15px;
+  padding-right: 25px; }
+
+.header__words--second {
+  margin-top: 54px;
+  padding-right: 25px; }
+
+.header__words--third {
+  margin-top: 118px;
+  padding-right: 25px; }
+
+.header__words--fourth {
+  margin-top: 151px; }
+
+.header__h1 {
+  margin-top: 270px;
+  margin-left: -376px; }
+
+.header__h1 span {
+  margin-left: -55px; }
+
+.about {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f3f1f0), color-stop(70%, #f2efee), to(#f2efed));
+  background: linear-gradient(#f3f1f0, #f2efee 70%, #f2efed);
+  height: 962px; }
+
+.about__arrow--left, .about__arrow--right {
+  position: relative;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 3px; }
+
+.about__arrow--left {
+  border-top: 6px solid #826b60;
+  border-right: 6px solid #826b60;
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg); }
+
+.about__arrow--right {
+  border-top: 6px solid #826b60;
+  border-left: 6px solid #826b60;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg); }
+
+.about__name {
+  margin-top: -344px;
+  margin-left: 180px; }
+
+.about__image {
+  margin-top: 203px;
+  margin-left: -150px;
+  width: 572px;
+  height: 760px; }
+
+.about__member-list {
+  margin: 231px 0px 70px 0;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+.about__dot {
+  width: 11px;
+  height: 11px;
+  line-height: 11px;
+  border-radius: 50%;
+  background-color: #826b60;
+  margin: 0 9px; }
+
+.about__h4 {
+  margin-top: 90px;
+  margin-bottom: 18px; }
+
+.about__text {
+  margin-left: 68px; }
+
+.music {
+  background-color: #f8f8f8; }
+
+.music__image {
+  margin-top: 101px;
+  margin-left: 85px;
+  display: block; }
+
+.music__now-playing {
+  margin-left: 15px; }
+
+.music__h4 {
+  margin-top: 108px; }
+
+.music__h4--second {
+  margin-top: 21px; }
+
+.music__song-name {
+  margin-top: -37px; }
+
+.music__song-name--second {
+  margin-top: 42px; }
+
+.music__song-number--active {
+  margin-top: -35px; }
+
+.music__player {
+  margin-top: 43px; }
+
+.music__progress-bar {
+  width: 635px;
+  height: 8px;
+  border-radius: 5px;
+  margin-top: -80px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(42.6%, #e4dddb), color-stop(42.6%, #826b60));
+  background: linear-gradient(to right, #e4dddb 42.6%, #826b60 42.6%); }
+
+.music__circle {
+  color: #826b60;
+  font-size: 33px;
+  margin-left: 270px;
+  margin-bottom: 60px; }
+
+.music__icons {
+  color: #e4dddb;
+  margin-left: -149px;
+  margin-top: -6px;
+  margin-bottom: 20px; }
+
+.music__icon--backward span {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 31px solid #e4dddb;
+  border-left: 31px solid transparent;
+  margin-right: -36px;
+  display: inline-block; }
+
+.music__icon--pause {
+  margin-left: 132px;
+  margin-right: 79px; }
+
+.music__icon--pause span {
+  background-color: #e4dddb;
+  width: 10px;
+  height: 46px;
+  margin-right: 7px;
+  display: inline-block; }
+
+.music__icon--forward {
+  margin-right: 95px; }
+
+.music__icon--forward span {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 31px solid #e4dddb;
+  border-right: 31px solid transparent;
+  margin-right: -36px;
+  display: inline-block; }
+
+.music__dot {
+  width: 16px;
+  height: 16px;
+  background-color: #e4dddb;
+  border-radius: 50%;
+  margin-left: 15px; }
+
+.music__album {
+  margin-top: -59px; }
+
+.music__album:first-of-type {
+  margin-top: -66px; }
+
+.music__year {
+  margin-right: 154px;
+  margin-left: 42px; }
+
+.music .button--light {
+  margin-right: 30px;
+  margin-left: -90px; }
+
+.music__song-wrapper {
+  margin-left: 30px; }
+
+.music__song {
+  margin-top: -71px; }
+
+.music__song:first-of-type {
+  margin-top: -58px; }
+
+.music__song:last-of-type {
+  margin-bottom: 129px; }
+
+.music .triangle {
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 14px solid #e4dddb;
+  border-right: 14px solid transparent;
+  display: inline-block;
+  margin-right: 6px; }
+
+.music .triangle--active {
+  border-left-color: #826b60; }
+
+.tour {
+  background-color: #f1eeed; }
+
+.tour__line {
+  background-color: #e4dddb;
+  width: 857px;
+  height: 3px; }
+
+.tour__heading {
+  margin-top: 57px;
+  margin-bottom: 56px; }
+
+.tour__arrow--left, .tour__arrow--right {
+  position: relative;
+  top: 133px;
+  width: 31px;
+  height: 31px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.tour__arrow--left {
+  border-top: 3px solid #e4dddb;
+  border-right: 3px solid #e4dddb;
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+  margin-right: 260px; }
+
+.tour__arrow--right {
+  border-top: 3px solid #e4dddb;
+  border-left: 3px solid #e4dddb;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin-left: 260px; }
+
+.tour__dot {
+  width: 13px;
+  height: 13px;
+  background-color: #826b60;
+  border-radius: 50%;
+  margin-left: 16px; }
+
+.tour__dot--past {
+  background-color: #e4dddb; }
+
+.tour__dot--active {
+  background-color: #241c18; }
+
+.tour__timetable {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  margin-top: -248px; }
+
+.tour__date-column {
+  margin-bottom: -21px; }
+
+.tour__date-column--active {
+  margin-bottom: -3px;
+  margin-top: 18px; }
+
+.tour__tickets {
+  overflow-y: scroll;
+  scroll-behavior: auto;
+  margin-bottom: 71px;
+  margin-top: -210px; }
+
+.tour__day {
+  padding-right: 5px; }
+
+.tour__separator {
+  background-color: #e4dddb;
+  height: 46px;
+  width: 6px;
+  margin-right: 20px;
+  margin-left: 20px; }
+
+.tour__button {
+  margin-right: 110px;
+  margin-left: 430px; }
+
+.tour__dots--mini {
+  margin-top: -29px;
+  margin-bottom: -23px; }
+
+.tour__dots--mini span {
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  background-color: #826b60;
+  border-radius: 50%;
+  margin-right: 14px; }
+
+.footer {
+  background: url(../../img/contact.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 965px; }
+
+.footer__dots--mini span {
+  background-color: #e4dddb;
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  margin-right: 17px; }
+
+.button {
+  width: 80px;
+  height: 36px;
+  text-transform: uppercase;
+  font-family: "Oswald Regular";
+  font-size: 18px; }
+
+.button--dark {
+  color: #e4dddb;
+  background-color: #826b60;
+  padding: 7px 24px; }
+
+.button--light {
+  color: #826b60;
+  background-color: #e4dddb;
+  padding: 7px 16px; }
+
+.button--tickets {
+  padding: 5px 15px; }
