@@ -72,12 +72,11 @@ p {
 
 .about__member-name {
   font-family: "Lora Italic";
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 200;
-  //line-height: 78px;
-  color: $accent;
+  letter-spacing: 1.1px;
+  color: $white;
   text-transform: uppercase;
-  letter-spacing: 0.9px;
 }
 
 .tour {
@@ -87,7 +86,7 @@ p {
   }
 
   &__month,
-  &__year{
+  &__year {
     font-family: "Oswald Bold";
     font-size: 23px;
     text-transform: uppercase;
@@ -111,5 +110,15 @@ p {
     &--active {
       color: $black;
     }
+  }
+}
+
+.footer {
+  label {
+    font-family: "Oswald Bold";
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: $white;
   }
 }
