@@ -1359,10 +1359,10 @@ p {
   text-transform: uppercase;
   margin-bottom: -19px; }
 
-.about__member-name {
+.about__member-list {
   font-family: "Lora Italic";
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 1.1px;
   color: #e4dddb;
   text-transform: uppercase; }
@@ -1546,75 +1546,165 @@ p {
 .about {
   background: -webkit-gradient(linear, left top, left bottom, from(#f3f1f0), color-stop(70%, #f2efee), to(#f2efed));
   background: linear-gradient(#f3f1f0, #f2efee 70%, #f2efed);
-  height: 962px; }
+  /*&__arrow--left,
+  &__arrow--right {
+    position: absolute;
+    cursor: pointer;
+    top: 180%;
+    width: 60px;
+    height: 60px;
+    transition: 0.5s;
+    border-radius: 3px;
+    margin: 20px;
+  }
 
-.about__arrow--left, .about__arrow--right {
+  &__arrow--left {
+    border-top: 6px solid $accent;
+    border-right: 6px solid $accent;
+    transform: rotate(225deg);
+  }
+
+  &__arrow--right {
+    left: 82.5%;
+    border-top: 6px solid $accent;
+    border-left: 6px solid $accent;
+    transform: rotate(135deg);
+  }
+*/ }
+
+.about__members {
   position: relative;
-  top: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  border-radius: 3px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center; }
 
-.about__arrow--left {
-  border-top: 6px solid #826b60;
-  border-right: 6px solid #826b60;
-  -webkit-transform: rotate(225deg);
-  transform: rotate(225deg); }
-
-.about__arrow--right {
-  border-top: 6px solid #826b60;
-  border-left: 6px solid #826b60;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg); }
-
-.about__name {
-  margin-top: -344px;
-  margin-left: 180px; }
+.about__carousel {
+  height: 850px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto; }
 
 .about__image {
   margin-top: 203px;
-  margin-left: -150px;
-  width: 572px;
-  height: 760px; }
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.about__track-container {
+  height: 100%;
+  position: relative; }
+
+.about__track {
+  position: relative;
+  height: 100%;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in; }
+
+.about__slide {
+  display: none; }
+
+.about .current-slide {
+  display: block; }
+
+.about__name--big {
+  margin-top: -344px;
+  margin-left: 180px; }
+
+.about__button {
+  position: absolute;
+  top: 180%;
+  width: 120px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer; }
+
+.about__button--right {
+  right: 130px; }
+
+.about__arrow svg {
+  background-color: #826b60; }
+
+.about__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 10px 0; }
+
+.about__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 12px;
+  cursor: pointer; }
+
+.about__indicator--current-slide {
+  background: rgba(0, 0, 0, 0.75); }
+
+.about .is-hidden {
+  display: none; }
 
 .about__member-list {
-  margin: 287px 0px -4px 0;
+  margin-top: 200px;
+  margin-bottom: -5px; }
+
+.about table {
   -webkit-transform: rotate(270deg);
-  transform: rotate(270deg); }
+  transform: rotate(270deg);
+  width: 100%; }
 
-.about__member-name {
-  margin-top: -20px; }
+.about table th {
+  display: none; }
 
-.about__member-name--active {
+.about table td {
+  padding: 9px 7px;
+  border: 1px solid transparent; }
+
+.about__name-role--active {
   color: #826b60; }
 
-.about__member-name:nth-of-type(1) {
-  margin-left: 3px; }
+.about__role {
+  text-align: left;
+  padding-bottom: 0px; }
 
-.about__member-name:nth-of-type(2) {
-  margin-left: -28px; }
-
-.about__member-name:nth-of-type(3) {
-  margin-left: -30px; }
+.about__name--small {
+  text-align: right; }
 
 .about__dot {
+  display: inline-block;
   width: 14px;
   height: 14px;
   border-radius: 50%;
   background-color: #e4dddb;
-  margin: 0 9px; }
+  padding: 0 6px; }
 
 .about__dot--active {
   background-color: #826b60; }
 
-.about__h4 {
+.about__heading {
   margin-top: 90px;
   margin-bottom: 18px; }
 
 .about__text {
-  margin-left: 68px; }
+  display: none;
+  margin-left: 68px;
+  text-align: justify; }
+
+.about__text--active {
+  display: block; }
 
 .music {
   background-color: #f8f8f8; }

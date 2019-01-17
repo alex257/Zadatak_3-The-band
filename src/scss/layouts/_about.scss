@@ -1,15 +1,127 @@
 .about {
   background: $bg--about;
-  height: 962px;
+  //height: 962px;
 
-  &__arrow--left,
-  &__arrow--right {
+  &__members {
     position: relative;
-    top: 50%;
+    display: flex;
+    //width: 80%;
+
+    text-align: center;
+  }
+
+  &__carousel {
+    //width: 80%;
+    height: 850px;
+    display: flex;
+    //width: 1100px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__image {
+    margin-top: 203px;
+    //margin-left: 45px;
+    //margin-left: -150px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    //background-size: 100%;
+    //width: 572px;
+    //height: 760px;
+    //display: block;
+    //max-width: 100%;
+    //height: auto;
+  }
+
+  &__track-container {
+    //background: lightgreen;
+    height: 100%;
+    position: relative;
+  }
+
+  &__track {
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+  }
+
+  &__slide {
+    //width: 800px;
+    display: none;
+  }
+
+  .current-slide {
+    display: block;
+  }
+
+  &__name--big {
+    margin-top: -344px;
+    margin-left: 180px;
+    span {
+      //margin-left: 80px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 180%;
+    width: 120px;
+    //top:50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  &__button--left {
+    //left: -40px;
+  }
+
+  &__button--right {
+    right: 130px;
+  }
+
+  &__arrow svg {
+    background-color: $accent;
+  }
+
+  &__nav {
+    //background: palevioletred;
+    display: flex;
+    //display: none;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  &__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 0 12px;
+    cursor: pointer;
+
+    &--current-slide {
+      background: rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  .is-hidden {
+    display: none;
+  }
+  /*&__arrow--left,
+  &__arrow--right {
+    position: absolute;
+    cursor: pointer;
+    top: 180%;
     width: 60px;
     height: 60px;
     transition: 0.5s;
     border-radius: 3px;
+    margin: 20px;
   }
 
   &__arrow--left {
@@ -19,70 +131,72 @@
   }
 
   &__arrow--right {
+    left: 82.5%;
     border-top: 6px solid $accent;
     border-left: 6px solid $accent;
     transform: rotate(135deg);
   }
-
-  &__name {
-    margin-top: -344px;
-    margin-left: 180px;
-    span {
-      //margin-left: 80px;
-    }
-  }
-
-  &__image {
-    margin-top: 203px;
-    margin-left: -150px;
-    //width: 100%;
-    //height: 100%;
-    //background-size: 100%;
-    width: 572px;
-    height: 760px;
-    //display: block;
-    //max-width: 100%;
-    //height: auto;
-  }
+*/
 
   &__member-list {
-    margin: 287px 0px -4px 0;
-    transform: rotate(270deg);
+    margin-top: 200px;
+    margin-bottom: -5px;
   }
+  table {
+    transform: rotate(270deg);
+    width: 100%;
 
-  &__member-name {
-    margin-top: -20px;
+    th {
+      display: none;
+    }
+
+    td {
+      padding: 9px 7px;
+      border: 1px solid transparent;
+    }
+  }
+  &__name-role {
     &--active {
       color: $accent;
     }
-    &:nth-of-type(1) {
-      margin-left: 3px;
-    }
-    &:nth-of-type(2) {
-      margin-left: -28px;
-    }
-    &:nth-of-type(3) {
-      margin-left: -30px;
-    }
+  }
+
+  &__role {
+    text-align: left;
+    padding-bottom: 0px;
+    //height: 0px;
+  }
+
+  &__name--small {
+    text-align: right;
   }
 
   &__dot {
+    display: inline-block;
     width: 14px;
     height: 14px;
     border-radius: 50%;
     background-color: $white;
-    margin: 0 9px;
+    padding: 0 6px;
+
     &--active {
       background-color: $accent;
     }
   }
 
-  &__h4 {
+  &__heading {
     margin-top: 90px;
     margin-bottom: 18px;
+    //text-align: center;
+    //align-self: center;
   }
   &__text {
+    display: none;
     margin-left: 68px;
+    text-align: justify;
     //margin-bottom: -80px;
+    &--active {
+      display: block;
+    }
   }
 }

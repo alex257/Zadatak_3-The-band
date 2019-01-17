@@ -1,11 +1,12 @@
 const gulp = require("gulp");
 browserSync = require("browser-sync").create();
 sass = require("gulp-sass");
-uglify = require("gulp-uglify");
+//uglify = require("gulp-uglify");
 autoprefixer = require("gulp-autoprefixer");
 uglifycss = require("gulp-uglifycss");
 concat = require("gulp-concat");
 sourcemaps = require("gulp-sourcemaps");
+const terser = require("gulp-terser");
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task("sass", function() {
@@ -59,13 +60,17 @@ gulp.task("minify-css", function() {
 
 //Concat scripts & uglify minify
 gulp.task("scripts", ["js"], function() {
-  return gulp
-    .src("src/js/*.js")
-    .pipe(sourcemaps.init())
-    .pipe(concat("main.js"))
-    .pipe(uglify())
-    .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest("dist/js"));
+  return (
+    gulp
+      .src("src/js/*.js")
+      .pipe(sourcemaps.init())
+      .pipe(concat("main.js"))
+      .pipe(terser())
+      //.pipe(uglify())
+      .pipe(sourcemaps.write("./"))
+
+      .pipe(gulp.dest("dist/js"))
+  );
 });
 
 // Copy All HTML files
