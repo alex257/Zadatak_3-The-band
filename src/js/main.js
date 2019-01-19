@@ -6,7 +6,6 @@ const dotsNav = document.querySelector(".about__nav");
 const dots = Array.from(dotsNav.children);
 
 const memberList = document.querySelector(".about__member-table");
-//console.log(memberList.rows[2].children[1].firstChild);
 
 const memberDot = document.querySelector(".about__dot");
 
@@ -14,6 +13,10 @@ const memberText = document.querySelector(".about__member-text");
 
 const slideSize = slides[0].getBoundingClientRect();
 const slideWidth = slideSize.width;
+
+
+let memberDotIndex= 2;
+
 
 //arrange the slides next to one another
 const setSlidePosition = (slide, index) => {
@@ -60,36 +63,7 @@ const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
   }
 };
 
-//when click left move slides to the left
-prevButton.addEventListener("click", e => {
-  const currentSlide = track.querySelector(".current-slide");
-  const prevSlide = currentSlide.previousElementSibling;
-  const prevIndex = slides.findIndex(slide => slide === prevSlide);
 
-  const currentMember = memberList.querySelector(".about__name-role--active");
-  const prevMember = currentMember.previousElementSibling;
-
-  //const currentMemberDot = memberList.querySelector(".about__dot--active");
-  //const prevMemberDot = memberList.rows[4].children[1].firstChild;
-  /*const prevMemberDot=[];
-  for(let i=4; i>=2; i--){
-     prevMemberDot = memberList.rows[i].children[1].firstChild;
-    };
-    console.log(prevMemberDot);*/
-
-  const currentText = memberText.querySelector(".about__text--active");
-  const prevText = currentText.previousElementSibling;
-
-  moveToSlide(track, currentSlide, prevSlide);
-
-  hideShowArrows(slides, prevButton, nextButton, prevIndex);
-
-  moveToMember(currentMember, prevMember);
-
-  //moveMemberDot(currentMemberDot, prevMemberDot);
-
-  moveText(currentText, prevText);
-});
 
 //when click right move slides to the right
 
@@ -104,11 +78,13 @@ nextButton.addEventListener("click", e => {
   const nextMember = currentMember.nextElementSibling;
 
   const currentMemberDot = memberList.querySelector(".about__dot--active");
-  /*const nextMemberDot=[];
-    for(let i=2; i<=5; i++){
+  nextMemberDot = memberList.rows[memberDotIndex].children[1].firstChild; 
+  memberDotIndex++;
+  
+   /* for(let i=2; i<=5; i++){
     nextMemberDot = memberList.rows[i].children[1].firstChild;
-  };
-  console.log(nextMemberDot);*/
+  };*/
+  console.log(nextMemberDot);
 
   const currentText = memberText.querySelector(".about__text--active");
   const nextText = currentText.nextElementSibling;
@@ -117,9 +93,51 @@ nextButton.addEventListener("click", e => {
   moveToSlide(track, currentSlide, nextSlide);
   hideShowArrows(slides, prevButton, nextButton, nextIndex);
   moveToMember(currentMember, nextMember);
-  //moveMemberDot(currentMemberDot, nextMemberDot);
+  moveMemberDot(currentMemberDot, nextMemberDot);
   moveText(currentText, nextText);
 });
+
+
+
+//when click left move slides to the left
+prevButton.addEventListener("click", e => {
+  const currentSlide = track.querySelector(".current-slide");
+  const prevSlide = currentSlide.previousElementSibling;
+  const prevIndex = slides.findIndex(slide => slide === prevSlide);
+
+  const currentMember = memberList.querySelector(".about__name-role--active");
+  const prevMember = currentMember.previousElementSibling;
+
+  /*const currentMemberDot = memberList.querySelector(".about__dot--active");
+  const prevMemberDot = memberList.rows[memberDotIndex].children[1].firstChild;
+  memberDotIndex--;
+  console.log(prevMemberDot);*/
+
+  const currentText = memberText.querySelector(".about__text--active");
+  const prevText = currentText.previousElementSibling;
+
+  moveToSlide(track, currentSlide, prevSlide);
+
+  hideShowArrows(slides, prevButton, nextButton, prevIndex);
+
+  moveToMember(currentMember, prevMember);
+
+ // moveMemberDot(currentMemberDot, prevMemberDot);
+
+  moveText(currentText, prevText);
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 //when click indictors
 
