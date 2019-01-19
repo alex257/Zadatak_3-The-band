@@ -22,17 +22,9 @@
 
   &__image {
     margin-top: 203px;
-    //margin-left: 45px;
-    //margin-left: -150px;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    //background-size: 100%;
-    //width: 572px;
-    //height: 760px;
-    //display: block;
-    //max-width: 100%;
-    //height: auto;
+    //object-fit: cover;
   }
 
   &__track-container {
@@ -73,6 +65,9 @@
     background: transparent;
     border: 0;
     cursor: pointer;
+    @include mQ($md) {
+      display: none;
+    }
   }
 
   &__button--left {
@@ -88,11 +83,15 @@
   }
 
   &__nav {
-    //background: palevioletred;
-    display: flex;
-    //display: none;
+    background: palevioletred;
+    //display: flex;
+    display: none;
     justify-content: center;
     padding: 10px 0;
+    @include mQ($md) {
+      display: flex;
+      margin-top: 10px;
+    }
   }
 
   &__indicator {
@@ -141,6 +140,9 @@
   &__member-list {
     margin-top: 200px;
     margin-bottom: -5px;
+    @include mQ($md) {
+      display: none;
+    }
   }
   table {
     transform: rotate(270deg);

@@ -1591,9 +1591,7 @@ p {
 .about__image {
   margin-top: 203px;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover; }
+  height: 100%; }
 
 .about__track-container {
   height: 100%;
@@ -1627,6 +1625,10 @@ p {
   border: 0;
   cursor: pointer; }
 
+@media only screen and (max-width: 980px) {
+  .about__button {
+    display: none; } }
+
 .about__button--right {
   right: 130px; }
 
@@ -1634,13 +1636,19 @@ p {
   background-color: #826b60; }
 
 .about__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  background: palevioletred;
+  display: none;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   padding: 10px 0; }
+
+@media only screen and (max-width: 980px) {
+  .about__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px; } }
 
 .about__indicator {
   border: 0;
@@ -1660,6 +1668,10 @@ p {
 .about__member-list {
   margin-top: 200px;
   margin-bottom: -5px; }
+
+@media only screen and (max-width: 980px) {
+  .about__member-list {
+    display: none; } }
 
 .about table {
   -webkit-transform: rotate(270deg);
