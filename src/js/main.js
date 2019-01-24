@@ -108,10 +108,10 @@ prevButton.addEventListener("click", e => {
   const currentMember = memberList.querySelector(".about__name-role--active");
   const prevMember = currentMember.previousElementSibling;
 
-  /*const currentMemberDot = memberList.querySelector(".about__dot--active");
+  const currentMemberDot = memberList.querySelector(".about__dot--active");
   const prevMemberDot = memberList.rows[memberDotIndex].children[1].firstChild;
   memberDotIndex--;
-  console.log(prevMemberDot);*/
+  console.log(prevMemberDot);
 
   const currentText = memberText.querySelector(".about__text--active");
   const prevText = currentText.previousElementSibling;
@@ -122,7 +122,7 @@ prevButton.addEventListener("click", e => {
 
   moveToMember(currentMember, prevMember);
 
- // moveMemberDot(currentMemberDot, prevMemberDot);
+ moveMemberDot(currentMemberDot, prevMemberDot);
 
   moveText(currentText, prevText);
 });

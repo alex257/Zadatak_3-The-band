@@ -43,11 +43,40 @@
       margin-top: 151px;
     }
   }
-  &__h1 {
-    margin-top: 270px;
-    margin-left: -376px;
-    span {
-      margin-left: -55px;
+
+  &__words--hidden{
+    @include mQ($sm) {
+      display: none;
     }
   }
+
+  &__heading {
+    margin-top: 270px;
+    margin-left: -376px;
+
+    @include mQ($md) {
+      margin-left: -276px;
+    }
+    @include mQ($sm) {
+      margin-left: -180px;
+    }
+    @include mQ($xs) {
+      margin-left: -300px;
+    }
+    span {
+      margin-left: -55px;
+      @include mQ($md) {
+        margin-left: -39px;
+      }
+      @include mQ($sm) {
+        margin-left: -22px;
+      }
+      @include mQ($xs) {
+        color: $white;
+        //margin-left: -22px;
+      }
+    }
+
+  }
 }
+

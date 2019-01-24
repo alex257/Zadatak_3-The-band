@@ -7,6 +7,27 @@ h2 {
 h1 {
   font-size: 98px;
   line-height: 109px;
+
+  @include mQ(1550px) {
+    font-size: 85px;
+    line-height: 100px;
+  }
+  @include mQ($lg) {
+    font-size: 70px;
+    line-height: 95px;
+  }
+  @include mQ($md) {
+    font-size: 55px;
+    line-height: 80px;
+  }
+  @include mQ($sm) {
+    font-size: 45px;
+    line-height: 60px;
+  }
+  @include mQ($xs) {
+    font-size: 40px;
+    line-height: 55px;
+  }
 }
 
 h2 {
@@ -68,6 +89,12 @@ p {
   color: $accent;
   text-transform: uppercase;
   margin-bottom: -19px;
+  @include mQ($lg) {
+    font-size: 12px;
+   }
+  @include mQ($md) {
+   font-size: 10px;
+  }
 }
 
 .about__member-list {
