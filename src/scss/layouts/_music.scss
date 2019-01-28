@@ -1,35 +1,57 @@
 .music {
   background-color: $bg--music;
+
+  &__img-and-playing-wrapper {
+    @include mQ($md) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  /*&__img-wrapper{
+
+  }*/
+
   &__image {
     margin-top: 101px;
-    margin-left: 85px;
+    //margin-left: 85px;
     display: block;
+    @include mQ(1650px) {
+      margin-left: 10px;
+    }
+    /*@include mQ($md) {
+      //margin-left: -20px;
+    }*/
   }
 
   &__now-playing {
     margin-left: 15px;
+    @include mQ($xs) {
+      //margin-left: 70px;
+      //margin-right: 0;
+    }
   }
 
-  &__h4 {
+  &__heading {
     margin-top: 108px;
+
+    @include mQ($md) {
+      margin-top: 50px;
+      margin-bottom: 48px;
+    }
     &--second {
       margin-top: 21px;
     }
   }
 
-  &__song-name {
-    margin-top: -37px;
-    &--second {
-      margin-top: 42px;
-    }
-  }
-
-  &__song-number--active {
-    margin-top: -35px;
-  }
-
   &__player {
     margin-top: 43px;
+
+    @include mQ($md) {
+      //
+    }
   }
 
   &__progress-bar {
@@ -38,53 +60,80 @@
     border-radius: 5px;
     margin-top: -80px;
     background: linear-gradient(to right, $white 42.6%, $accent 42.6%);
+
+    @include mQ(1580px) {
+      width: 450px;
+    }
+    @include mQ($md) {
+      width: 350px;
+      height: 5px;
+    }
+    @include mQ($xs) {
+      width: 290px;
+    }
   }
 
   &__circle {
     color: $accent;
     font-size: 33px;
-    margin-left: 270px;
+    margin-left: 269px;
     margin-bottom: 60px;
+
+    @include mQ($md) {
+      font-size: 16px;
+      margin-bottom: 69px;
+      margin-left: 150px;
+    }
   }
 
   &__icons {
     color: $white;
-    margin-left: -149px;
+    justify-content: space-evenly;
     margin-top: -6px;
     margin-bottom: 20px;
+
+    @include mQ($md) {
+      margin-left: -80px;
+      margin-top: 10px;
+    }
   }
 
-  &__icon--backward {
-    span {
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-right: 31px solid $white;
-      border-left: 31px solid transparent;
-      margin-right: -36px;
-      display: inline-block;
+  .material-icons {
+    font-size: 78px;
+
+    @include mQ($lg) {
+      font-size: 70px;
     }
+    @include mQ($md) {
+      font-size: 50px;
+    }
+  }
+
+  /*&__icon--rewind {
   }
   &__icon--pause {
-    margin-left: 132px;
-    margin-right: 79px;
-    span {
-      background-color: $white;
-      width: 10px;
-      height: 46px;
-      margin-right: 7px;
-      display: inline-block;
+  }
+  &__icon--forward {
+  }*/
+
+  &__discography-album-wrapper {
+    margin-left: 0;
+
+    @include mQ($md) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0;
+      margin-left: 30px;
     }
   }
 
-  &__icon--forward {
-    margin-right: 95px;
-    span {
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-left: 31px solid $white;
-      border-right: 31px solid transparent;
-      margin-right: -36px;
-      display: inline-block;
+  &__discography {
+    @include mQ($md) {
+      //margin-left: 30px;
+      //margin-right: 30px;
+    }
+    @include mQ($xs) {
     }
   }
 
@@ -94,30 +143,92 @@
     background-color: $white;
     border-radius: 50%;
     margin-left: 15px;
+    @include mQ($md) {
+      width: 14px;
+      height: 14px;
+    }
+    @include mQ($sm) {
+      display: none;
+      width: 9px;
+      height: 9px;
+    }
   }
 
   &__album {
     margin-top: -59px;
+
+    @include mQ($sm) {
+      margin-bottom: 20px;
+    }
+    @include mQ($xs) {
+      margin-bottom: 36px;
+    }
+
     &:first-of-type {
       margin-top: -66px;
+      @include mQ($sm) {
+        margin-top: -40px;
+      }
     }
   }
   &__year {
     margin-right: 154px;
     margin-left: 42px;
+    @include mQ($sm) {
+      margin-left: 25px;
+    }
   }
 
   .button--light {
     margin-right: 30px;
     margin-left: -90px;
+    @include mQ($sm) {
+      margin-left: -130px;
+    }
+  }
+
+  .button--dark {
+    @include mQ($sm) {
+      margin-left: -50px;
+    }
+  }
+
+  &__song-name {
+    margin-top: -37px;
+    &--second {
+      margin-top: 42px;
+      @include mQ($md) {
+        margin-bottom: 60px;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &__song-number--active {
+    margin-top: -35px;
+
+    @include mQ($sm) {
+      margin-top: -17px;
+    }
+    @include mQ($xs) {
+      margin-top: 0px;
+    }
   }
 
   &__song-wrapper {
     margin-left: 30px;
+    @include mQ($md) {
+      //margin-left: 0px;
+      margin-top: 40px;
+    }
   }
 
   &__song {
     margin-top: -71px;
+    @include mQ($md) {
+      margin-bottom: 20px;
+    }
+
     &:first-of-type {
       margin-top: -58px;
     }
@@ -125,6 +236,7 @@
       margin-bottom: 129px;
     }
   }
+
   .triangle {
     border-top: 9px solid transparent;
     border-bottom: 9px solid transparent;

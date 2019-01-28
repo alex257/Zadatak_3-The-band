@@ -1,6 +1,6 @@
 @mixin grid($size, $breakpoint) {
   @media (max-width: $breakpoint) {
-    @for $i from 1 through $columns {
+    @for $i from 0 through $columns {
       .col-#{$size}-#{$i} {
         flex: 0 0 (100% / $columns) * $i;
       }

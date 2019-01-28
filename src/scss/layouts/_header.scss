@@ -44,7 +44,7 @@
     }
   }
 
-  &__words--hidden{
+  &__words--hidden {
     @include mQ($sm) {
       display: none;
     }
@@ -76,7 +76,5 @@
         //margin-left: -22px;
       }
     }
-
   }
 }
-

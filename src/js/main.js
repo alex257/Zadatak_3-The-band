@@ -2,8 +2,8 @@ const track = document.querySelector(".about__track");
 const slides = Array.from(track.children);
 const nextButton = document.querySelector(".about__button--right");
 const prevButton = document.querySelector(".about__button--left");
-const dotsNav = document.querySelector(".about__nav");
-const dots = Array.from(dotsNav.children);
+//const dotsNav = document.querySelector(".about__nav");
+//const dots = Array.from(dotsNav.children);
 
 const memberList = document.querySelector(".about__member-table");
 
@@ -141,7 +141,7 @@ prevButton.addEventListener("click", e => {
 
 //when click indictors
 
-dotsNav.addEventListener("click", e => {
+/*dotsNav.addEventListener("click", e => {
   //what indicator was clicked on?
   const targetDot = e.target.closest("button");
   if (!targetDot) return;
@@ -161,4 +161,4 @@ dotsNav.addEventListener("click", e => {
 
   moveToSlide(track, currentSlide, targetSlide);
   moveText(currentText, nextText);
-});
+});*/

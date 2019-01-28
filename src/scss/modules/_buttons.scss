@@ -5,6 +5,28 @@
   font-family: "Oswald Regular";
   font-size: 18px;
 
+  @include mQ(1150px) {
+    font-size: 16px;
+  }
+  @include mQ($sm) {
+    font-size: 14px;
+  }
+  @include mQ(600px) {
+    font-size: 12px;
+  }
+  @include mQ(520px) {
+    font-size: 11px;
+  }
+  @include mQ(450px) {
+    font-size: 10px;
+  }
+  @include mQ(415px) {
+    font-size: 8px;
+  }
+  @include mQ(390px) {
+    font-size: 6px;
+  }
+
   &--dark {
     color: $white;
     background-color: $accent;
@@ -19,5 +41,9 @@
 
   &--tickets {
     padding: 5px 15px;
+
+    @include mQ(390px) {
+      padding: 4px 11px;
+    }
   }
 }

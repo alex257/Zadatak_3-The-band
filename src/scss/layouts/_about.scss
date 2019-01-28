@@ -1,7 +1,12 @@
 .about {
   background: $bg--about;
+  display: flex;
   position: relative;
-  //height: 962px;
+
+  @include mQ($md) {
+    align-items: center;
+    justify-content: center;
+  }
 
   &__members {
     position: relative;
@@ -11,29 +16,34 @@
 
     @include mQ($md) {
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
 
   &__carousel {
     //width: 80%;
-    height: 950px;
+    //height: 950px;
     display: flex;
     //width: 1100px;
     overflow: hidden;
     position: relative;
     margin: 0 auto;
-    //margin-top: 203px;
   }
 
   &__image {
-    margin-top: 203px;
+    margin-left: 62px;
     width: 100%;
     height: 100%;
+
+    @include mQ(1700px) {
+      margin-left: 0px;
+    }
     @include mQ($lg) {
       //margin-top: 150px;
     }
     @include mQ($md) {
-      margin-top: 0px;
+      //margin-top: 0px;
       object-fit: cover;
     }
   }
@@ -54,6 +64,7 @@
     //width: 800px;
     display: none;
     margin-top: 203px;
+
     @include mQ($lg) {
       //margin-top: 150px;
     }
@@ -64,14 +75,12 @@
 
   .current-slide {
     display: block;
+
     @include mQ($md) {
       height: 500px;
       width: 500px;
     }
-    @include mQ($md) {
-      height: 500px;
-      width: 500px;
-    }
+
     @include mQ($sm) {
       height: auto;
       width: auto;
@@ -79,28 +88,40 @@
   }
 
   &__name--big {
-    margin-top: -344px;
-    margin-left: 180px;
+    margin-top: -334px;
+    margin-left: 375px;
     position: absolute;
     z-index: 15;
-    @include mQ(1550px) {
-      margin-top: -250px;
-    }
-    @include mQ($lg) {
-      margin-top: -200px;
-      margin-left: 110px;
+
+    &:nth-of-type(5) {
+      margin-left: 315px;
     }
 
+    &:nth-of-type(2),
+    &:nth-of-type(5) {
+      @include mQ($lg) {
+        margin-top: -220px;
+        margin-left: 180px;
+      }
+    }
+
+    @include mQ(1700px) {
+      margin-top: -250px;
+      margin-left: 275px;
+    }
+    @include mQ($lg) {
+      margin-top: -220px;
+      margin-left: 210px;
+    }
     @include mQ($md) {
       margin-top: -200px;
       margin-left: 180px;
     }
     @include mQ($sm) {
       margin-top: -160px;
-    }
-
-    @include mQ($xs) {
-      margin: -130px auto 10px auto;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
 
@@ -113,6 +134,7 @@
     background: transparent;
     border: 0;
     cursor: pointer;
+
     @include mQ(1700px) {
       width: 130px;
       height: 160px;
@@ -126,13 +148,11 @@
       height: 140px;
       top: 35%;
     }
-
     @include mQ($sm) {
       width: 85px;
       height: 110px;
       top: 30%;
     }
-
     @include mQ($xs) {
       width: 65px;
       height: 90px;
@@ -142,6 +162,7 @@
 
   &__button--left {
     left: 158px;
+
     @include mQ(1700px) {
       left: 40px;
     }
@@ -149,7 +170,7 @@
       left: 30px;
     }
     @include mQ($sm) {
-      left: 5px;
+      left: -5px;
     }
     @include mQ($xs) {
       left: -10px;
@@ -158,6 +179,7 @@
 
   &__button--right {
     right: 158px;
+
     @include mQ(1700px) {
       right: 40px;
     }
@@ -165,7 +187,7 @@
       right: 30px;
     }
     @include mQ($sm) {
-      right: 5px;
+      right: -5px;
     }
     @include mQ($xs) {
       right: -10px;
@@ -177,36 +199,42 @@
   }
 
   &__description {
-    
-      padding-left: 60px;
-  
+    @include mQ(1700px) {
+      margin-left: 60px;
+    }
+    @include mQ($lg) {
+      margin-left: 90px;
+    }
   }
 
   &__member-list {
-    margin-top: 200px;
+    margin-top: 150px;
     margin-bottom: -5px;
     //margin-left: 40px;
-    @include mQ($lg) {
 
-      margin-top: 0px;
+    @include mQ($lg) {
+      //margin-top: 0px;
     }
     @include mQ($md) {
       display: none;
     }
   }
+
   table {
     transform: rotate(270deg);
     width: 100%;
+    font-size: 11px;
 
     th {
       display: none;
     }
 
     td {
-      padding: 9px 7px;
+      padding: 10px 7px;
       border: 1px solid transparent;
     }
   }
+
   &__name-role {
     &--active {
       color: $accent;
@@ -216,7 +244,6 @@
   &__role {
     text-align: left;
     padding-bottom: 0px;
-    //height: 0px;
   }
 
   &__name--small {
@@ -229,52 +256,59 @@
     height: 14px;
     border-radius: 50%;
     background-color: $white;
-    padding: 0 6px;
+    margin: 0 -20px;
 
     &--active {
       background-color: $accent;
     }
   }
 
+  &__text-wrapper {
+    @include mQ($md) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   &__heading {
-    margin-top: 90px;
+    margin-top: 67px;
     margin-bottom: 18px;
+
     @include mQ($lg) {
-      font-size: 28px;
       margin-bottom: -11px;
     }
-
     @include mQ($md) {
       margin-top: 37px;
       margin-bottom: 16px;
     }
   }
-  &__member-text {
-    margin: 0 40px;
 
-   
+  &__member-text {
+    margin: 0 35px;
+
+    @include mQ($md) {
+      margin: 0;
+    }
+    @include mQ($sm) {
+      margin-left: -40px;
+    }
   }
 
   &__text {
     display: none;
-    text-align: justify;
+    text-align: left;
 
-    @include mQ(1550px) {
-      margin: 25px -40px 0px -40px;
-    }
     @include mQ($lg) {
-      font-size: 16px;
       line-height: 30px;
       margin-top: 10px;
+      text-align: justify;
     }
     @include mQ($md) {
-      font-size: 18px;
       margin-bottom: 36px;
-      //margin: 0 50px 36px 50px;
+      text-align: left;
     }
-
     @include mQ($xs) {
-      margin: 0 -40px 30px -40px;
+      text-align: justify;
     }
 
     &--active {
