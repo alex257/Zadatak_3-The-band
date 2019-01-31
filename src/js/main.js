@@ -77,14 +77,14 @@ nextButton.addEventListener("click", e => {
   const currentMember = memberList.querySelector(".about__name-role--active");
   const nextMember = currentMember.nextElementSibling;
 
-  const currentMemberDot = memberList.querySelector(".about__dot--active");
-  nextMemberDot = memberList.rows[memberDotIndex].children[1].firstChild; 
-  memberDotIndex++;
+  //const currentMemberDot = memberList.querySelector(".about__dot--active");
+  //nextMemberDot = memberList.rows[memberDotIndex].children[1].firstChild; 
+  //memberDotIndex++;
   
    /* for(let i=2; i<=5; i++){
     nextMemberDot = memberList.rows[i].children[1].firstChild;
   };*/
-  console.log(nextMemberDot);
+  //console.log(nextMemberDot);
 
   const currentText = memberText.querySelector(".about__text--active");
   const nextText = currentText.nextElementSibling;
@@ -93,7 +93,7 @@ nextButton.addEventListener("click", e => {
   moveToSlide(track, currentSlide, nextSlide);
   hideShowArrows(slides, prevButton, nextButton, nextIndex);
   moveToMember(currentMember, nextMember);
-  moveMemberDot(currentMemberDot, nextMemberDot);
+  //moveMemberDot(currentMemberDot, nextMemberDot);
   moveText(currentText, nextText);
 });
 
@@ -108,10 +108,10 @@ prevButton.addEventListener("click", e => {
   const currentMember = memberList.querySelector(".about__name-role--active");
   const prevMember = currentMember.previousElementSibling;
 
-  const currentMemberDot = memberList.querySelector(".about__dot--active");
-  const prevMemberDot = memberList.rows[memberDotIndex].children[1].firstChild;
-  memberDotIndex--;
-  console.log(prevMemberDot);
+  //const currentMemberDot = memberList.querySelector(".about__dot--active");
+  //const prevMemberDot = memberList.rows[memberDotIndex].children[1].firstChild;
+  //memberDotIndex--;
+  //console.log(prevMemberDot);
 
   const currentText = memberText.querySelector(".about__text--active");
   const prevText = currentText.previousElementSibling;
@@ -122,7 +122,7 @@ prevButton.addEventListener("click", e => {
 
   moveToMember(currentMember, prevMember);
 
- moveMemberDot(currentMemberDot, prevMemberDot);
+ //moveMemberDot(currentMemberDot, prevMemberDot);
 
   moveText(currentText, prevText);
 });

@@ -103,8 +103,6 @@ h4 {
   }
 }
 
-//h5.music__song-name,
-//h5.music__album-name,
 .music__year {
   font-family: "Oswald Light";
 }
@@ -157,6 +155,9 @@ p {
   }
   @include mQ($sm) {
     font-size: 11px;
+  }
+  @include mQ($xs) {
+    font-size: 10px;
   }
 }
 
