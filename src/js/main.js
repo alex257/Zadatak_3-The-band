@@ -75,7 +75,9 @@ nextButton.addEventListener("click", e => {
   const nextIndex = slides.findIndex(slide => slide === nextSlide); //find index number for slide
 
   const currentMember = memberList.querySelector(".about__name-role--active");
-  const nextMember = currentMember.nextElementSibling;
+  //const nextMember = currentMember.nextElementSibling;
+  const nextMember = currentMember.nextSibling;
+
 
   //const currentMemberDot = memberList.querySelector(".about__dot--active");
   //nextMemberDot = memberList.rows[memberDotIndex].children[1].firstChild; 

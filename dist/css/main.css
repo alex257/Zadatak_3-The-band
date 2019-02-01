@@ -1539,9 +1539,9 @@ p {
 
 .about__member-list {
   font-family: "Lora Italic";
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 1.1px;
+  letter-spacing: 1.4px;
   color: #e4dddb;
   text-transform: uppercase; }
 
@@ -2020,45 +2020,46 @@ p {
 
 .about__member-list {
   margin-top: 150px;
-  margin-bottom: -5px; }
+  margin-bottom: -5px;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg); }
 
 @media only screen and (max-width: 1100px) {
   .about__member-list {
     display: none; } }
 
-.about table {
-  -webkit-transform: rotate(270deg);
-  transform: rotate(270deg);
-  width: 100%;
-  font-size: 11px; }
+.about__member-table {
+  display: table; }
 
-.about table th {
-  display: none; }
+.about__name-role {
+  display: table-row; }
 
-.about table td {
-  padding: 10px 7px;
-  border: 1px solid transparent; }
+.about__name-role div {
+  display: table-cell;
+  padding-top: 27px; }
 
 .about__name-role--active {
   color: #826b60; }
 
+.about__name--small {
+  text-align: right;
+  padding-right: 17px; }
+
 .about__role {
   text-align: left;
-  padding-bottom: 0px; }
+  position: relative;
+  padding-left: 11px; }
 
-.about__name--small {
-  text-align: right; }
-
-.about__dot {
-  display: inline-block;
+.about__role:before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: currentcolor;
+  left: 2px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: #e4dddb;
-  margin: 0 -20px; }
-
-.about__dot--active {
-  background-color: #826b60; }
+  margin-left: -12px; }
 
 @media only screen and (max-width: 1100px) {
   .about__text-wrapper {

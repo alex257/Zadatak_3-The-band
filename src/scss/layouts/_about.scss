@@ -210,8 +210,7 @@
   &__member-list {
     margin-top: 150px;
     margin-bottom: -5px;
-    //margin-left: 40px;
-
+    transform: rotate(270deg);
     @include mQ($lg) {
       //margin-top: 0px;
     }
@@ -220,46 +219,43 @@
     }
   }
 
-  table {
-    transform: rotate(270deg);
-    width: 100%;
-    font-size: 11px;
-
-    th {
-      display: none;
-    }
-
-    td {
-      padding: 10px 7px;
-      border: 1px solid transparent;
-    }
+  &__member-table {
+    display: table;
   }
 
   &__name-role {
+    display: table-row;
+
+    div {
+      display: table-cell;
+      padding-top: 27px;
+    }
+
     &--active {
       color: $accent;
     }
   }
 
-  &__role {
-    text-align: left;
-    padding-bottom: 0px;
-  }
-
   &__name--small {
     text-align: right;
+    padding-right: 17px;
   }
 
-  &__dot {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: $white;
-    margin: 0 -20px;
+  &__role {
+    text-align: left;
+    position: relative;
+    padding-left: 11px;
 
-    &--active {
-      background-color: $accent;
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: currentcolor;
+      left: 2px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      margin-left: -12px;
     }
   }
 
