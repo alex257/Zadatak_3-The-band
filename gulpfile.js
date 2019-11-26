@@ -1,100 +1,82 @@
-const gulp = require("gulp");
-browserSync = require("browser-sync").create();
-sass = require("gulp-sass");
-//uglify = require("gulp-uglify");
-autoprefixer = require("gulp-autoprefixer");
-uglifycss = require("gulp-uglifycss");
-concat = require("gulp-concat");
-sourcemaps = require("gulp-sourcemaps");
-const terser = require("gulp-terser");
+const gulp = require("gulp"),
+  sass = require("gulp-sass"),
+  browserSync = require("browser-sync").create(),
+  //autoprefixer = require("gulp-autoprefixer"),
+  sourcemaps = require("gulp-sourcemaps"),
+  gulpCopy = require("gulp-copy"),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify'),
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer'),
+  cssnano = require('cssnano');
 
-// Compile sass into CSS & auto-inject into browsers
-gulp.task("sass", function() {
+
+function style() {
+  //return gulp
+  //.src(["node_modules/bootstrap/scss/bootstrap.scss", "src/scss/*.scss"], {
+  // sourcemaps: true
+  //})
   return gulp
-    .src("src/scss/**/*.scss")
-    .pipe(sass())
-    .pipe(
+    
+    .src("src/scss/**/*.scss", {
+      sourcemaps: true
+    })
+
+    .pipe(sass().on("error", sass.logError))
+
+    .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
+
+    /*.pipe(
       autoprefixer({
-        browsers: ["last 2 versions"],
         cascade: false
       })
-    )
-    .pipe(sass().on("error", sass.logError))
+    )*/
+
     .pipe(gulp.dest("dist/css"))
-    .pipe(browserSync.stream());
-});
 
-// Move the javascript files into /src/js folder
-gulp.task("js", function() {
+    .pipe(browserSync.stream());
+}
+
+function copyHtml() {
   return gulp
-    .src("src/js/*.js")
-    .pipe(gulp.dest("dist/js"))
-    .pipe(browserSync.stream());
-});
+    .src("src/*.html")
+    .pipe(browserSync.stream())
+    .pipe(gulp.dest("dist"));
+}
 
-// Static Server + watching files
-gulp.task("serve", function() {
+function copyImages() {
+  return gulp.src("src/img/*.{gif,jpg,png,svg}").pipe(gulp.dest("dist/img"));
+}
+
+function js() {
+  return gulp
+    .src([
+      "src/js/*.js"
+    ])
+    .pipe(concat('main.js'))
+    //.pipe(uglify())
+    .pipe(browserSync.stream())
+    .pipe(gulp.dest("dist/js/"));
+}
+
+function watch() {
   browserSync.init({
     server: "./dist"
   });
 
-  gulp.watch("src/scss/**/*.scss", ["sass"]);
+  gulp.watch("src/scss/**/*.scss", style);
+  gulp.watch("src/*.html", copyHtml);
   gulp.watch("src/*.html").on("change", browserSync.reload);
-  gulp.watch("src/js/*.js", ["scripts"]);
-  gulp.watch("src/*.html", ["copyHtml"]);
-});
+  gulp.watch("src/img/*.{gif,jpg,png,svg}", copyImages);
+  gulp.watch("src/js/*.js").on("change", browserSync.reload);
+}
 
-//Minify css
-gulp.task("minify-css", function() {
-  return gulp
-    .src("dist/css/*.css")
-    .pipe(concat("main.css"))
-    .pipe(
-      uglifycss({
-        maxLineLen: 80,
-        uglyComments: true
-      })
-    )
-    .pipe(gulp.dest("dist/css"));
-});
+exports.style = style;
+exports.copyHtml = copyHtml;
+exports.copyImages = copyImages;
+exports.watch = watch;
+exports.default = build;
 
-//Concat scripts & uglify minify
-gulp.task("scripts", ["js"], function() {
-  return (
-    gulp
-      .src("src/js/*.js")
-      .pipe(sourcemaps.init())
-      .pipe(concat("main.js"))
-      .pipe(terser())
-      //.pipe(uglify())
-      .pipe(sourcemaps.write("./"))
-
-      .pipe(gulp.dest("dist/js"))
-  );
-});
-
-// Copy All HTML files
-gulp.task("copyHtml", function() {
-  gulp.src("src/*.html").pipe(gulp.dest("dist"));
-});
-
-// Copy img files
-gulp.task("copyImg", function() {
-  gulp.src("src/img/**/*.{gif,jpg,png,svg}").pipe(gulp.dest("dist/img"));
-});
-
-// Copy font files
-gulp.task("copyFonts", function() {
-  gulp.src("src/fonts/**/*.{ttf,woff2,woff}").pipe(gulp.dest("dist/fonts"));
-});
-
-gulp.task("default", [
-  "sass",
-  "js",
-  "serve",
-  "minify-css",
-  "scripts",
-  "copyHtml",
-  "copyImg",
-  "copyFonts"
-]);
+var build = gulp.parallel(style, copyHtml, js, watch);
+gulp.task(build);
+gulp.task("default", build);

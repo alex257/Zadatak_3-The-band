@@ -2,12 +2,14 @@ const track = document.querySelector(".about__track");
 const slides = Array.from(track.children);
 const nextButton = document.querySelector(".about__button--right");
 const prevButton = document.querySelector(".about__button--left");
+
 //const dotsNav = document.querySelector(".about__nav");
 //const dots = Array.from(dotsNav.children);
 
 const memberList = document.querySelector(".about__member-table");
+console.log(memberList);
 
-const memberDot = document.querySelector(".about__dot");
+//const memberDot = document.querySelector(".about__dot");
 
 const memberText = document.querySelector(".about__member-text");
 
@@ -15,7 +17,7 @@ const slideSize = slides[0].getBoundingClientRect();
 const slideWidth = slideSize.width;
 
 
-let memberDotIndex= 2;
+//let memberDotIndex= 2;
 
 
 //arrange the slides next to one another
@@ -39,10 +41,10 @@ const moveToMember = (currentMember, targetMember) => {
 };
 
 //move active dot in the table
-const moveMemberDot = (currentMemberDot, targetMemberDot) => {
-  currentMemberDot.classList.remove("about__dot--active");
-  targetMemberDot.classList.add("about__dot--active");
-};
+//const moveMemberDot = (currentMemberDot, targetMemberDot) => {
+  //currentMemberDot.classList.remove("about__dot--active");
+  //targetMemberDot.classList.add("about__dot--active");
+//};
 
 //move text description about each member
 const moveText = (currentText, targetText) => {
@@ -76,7 +78,7 @@ nextButton.addEventListener("click", e => {
 
   const currentMember = memberList.querySelector(".about__name-role--active");
   //const nextMember = currentMember.nextElementSibling;
-  const nextMember = currentMember.nextSibling;
+  const nextMember = currentMember.nextElementSibling;
 
 
   //const currentMemberDot = memberList.querySelector(".about__dot--active");
