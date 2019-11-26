@@ -48,6 +48,11 @@ function copyImages() {
   return gulp.src("src/img/*.{gif,jpg,png,svg}").pipe(gulp.dest("dist/img"));
 }
 
+function copyFonts() {
+  return gulp.src("src/fonts/**/*.{ttf,woff2,woff}").pipe(gulp.dest("dist/fonts"));
+}
+
+
 function js() {
   return gulp
     .src([
@@ -74,9 +79,10 @@ function watch() {
 exports.style = style;
 exports.copyHtml = copyHtml;
 exports.copyImages = copyImages;
+exports.copyFonts = copyFonts;
 exports.watch = watch;
 exports.default = build;
 
-var build = gulp.parallel(style, copyHtml, js, watch);
+var build = gulp.parallel(style, copyHtml, copyImages, copyFonts, js, watch);
 gulp.task(build);
 gulp.task("default", build);
